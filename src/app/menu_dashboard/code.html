@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fff8f4",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffdad6",
+                    "tertiary-fixed": "#ffddaf",
+                    "surface-bright": "#fff8f4",
+                    "primary": "#8a000a",
+                    "on-surface": "#2b1700",
+                    "outline-variant": "#e4beb9",
+                    "on-tertiary-fixed": "#281800",
+                    "tertiary-container": "#7a5200",
+                    "surface-dim": "#ffd2a4",
+                    "on-primary-container": "#ffc2bb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#ffc873",
+                    "inverse-surface": "#472a05",
+                    "primary-container": "#b31217",
+                    "on-primary-fixed": "#410002",
+                    "surface-variant": "#ffddbb",
+                    "on-secondary-container": "#794f13",
+                    "inverse-primary": "#ffb4ab",
+                    "on-surface-variant": "#5b403d",
+                    "surface-container-highest": "#ffddbb",
+                    "tertiary-fixed-dim": "#f7bc5f",
+                    "secondary-fixed-dim": "#f5bc77",
+                    "on-error-container": "#93000a",
+                    "outline": "#906f6c",
+                    "on-secondary-fixed": "#2a1700",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "surface-tint": "#ba191b",
+                    "secondary-fixed": "#ffddb8",
+                    "background": "#fff8f4",
+                    "secondary-container": "#fec47e",
+                    "on-error": "#ffffff",
+                    "secondary": "#80551a",
+                    "surface-container-low": "#fff1e6",
+                    "on-primary-fixed-variant": "#93000b",
+                    "on-secondary-fixed-variant": "#653e02",
+                    "on-tertiary-fixed-variant": "#614000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#ffeedf",
+                    "error-container": "#ffdad6",
+                    "on-background": "#2b1700",
+                    "surface-container": "#ffead8",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#5b3c00",
+                    "surface-container-high": "#ffe3ca"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "margin": "20px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "lg": "40px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Work Sans"],
+                    "label-sm": ["Work Sans"],
+                    "label-lg": ["Work Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Work Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm border-b border-zinc-200 dark:border-zinc-800 docked full-width top-0 sticky z-50 flex justify-between items-center px-4 h-16 w-full">
+<div class="flex items-center gap-3">
+<button class="p-2 text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-extrabold text-red-700 dark:text-red-500 tracking-tight font-plus-jakarta">Bharath Canteen</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-zinc-200 overflow-hidden border border-zinc-200">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a young male student smiling, wearing a university polo shirt, natural soft outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD460_Dr3uOb3jnbYCjlBVMpdbAZbBM7qLMVQMwFnN9tC9nUGjeuK07pT2zeUSfN-oXR5DkpufB9g495qO2jv7xlSAZoyfc0QQ8ynw_MNVkQJrbgzAjPJ9_p_Obzb5BwB-y-DZ1OKj8dRSULxHyOeXw6rwW8OuAsH0HzjjC9TjFLdvRfER1a7Hw_r-KL5Qqkb1ymKDrutftoxnEnPHg3sHUCFc2STveqOUGc4R3EfGIUk33B14iQjDpK9W7o9rY8mWs5fJNcvI_AeC"/>
+</div>
+</div>
+</header>
+<main class="px-4 pb-32 pt-4 max-w-md mx-auto">
+<!-- Welcome Section -->
+<section class="mb-6">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-1">Hello, Arjun!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">What are you craving today?</p>
+</section>
+<!-- Search Bar -->
+<section class="mb-6">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-outline/10 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-primary-container font-body-md text-body-md placeholder:text-outline shadow-sm" placeholder="Search for dishes..." type="text"/>
+<button class="absolute right-3 p-2 text-primary-container">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</section>
+<!-- Category Chips -->
+<section class="mb-8">
+<div class="flex gap-3 overflow-x-auto hide-scrollbar -mx-4 px-4">
+<button class="bg-primary-container text-on-primary whitespace-nowrap px-6 py-2 rounded-full font-label-lg shadow-md transition-all active:scale-95">All</button>
+<button class="bg-surface-container-high text-on-surface-variant whitespace-nowrap px-6 py-2 rounded-full font-label-lg transition-all active:scale-95 border border-outline/5">Snacks</button>
+<button class="bg-surface-container-high text-on-surface-variant whitespace-nowrap px-6 py-2 rounded-full font-label-lg transition-all active:scale-95 border border-outline/5">Meals</button>
+<button class="bg-surface-container-high text-on-surface-variant whitespace-nowrap px-6 py-2 rounded-full font-label-lg transition-all active:scale-95 border border-outline/5">Drinks</button>
+</div>
+</section>
+<!-- Food Menu Grid -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Food Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(61,34,0,0.08)] flex flex-col group">
+<div class="relative h-32">
+<img alt="Samosa" class="w-full h-full object-cover" data-alt="crispy golden-brown triangular samosas served on a wooden board with mint chutney and spicy dip, warm indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuGHY-foRPUSNyVUQ0KlXG0HK1GJjYGnI7Ps9c4vtBu1uR4WxMU0moy3KqAUJa-mCnuXnQSCe5xJrVOqUz6W_xsfIkl5onJTRSxBHs9jLUjsyQLXePxovdaf3yynu1emNhdwnyPwsAUhEW0jFJA677xktFn0_Gd0GarAPkY9QfeXwvsUQ2brba8_dT7Oy6cbg80aXCgR_BhWtO1OkRUCQtg2hSg4B0lv9p9EIONQHN5u29rkGyyH8VlOfPjQ1XZbBW_Hxb-At_tPtC"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface">4.8</span>
+</div>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<h3 class="font-title-lg text-[16px] text-on-surface leading-tight mb-1">Masala Samosa</h3>
+<p class="text-[12px] text-on-surface-variant mb-3 flex-grow">Classic spiced potato filling</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-bold text-primary-container">₹25.00</span>
+<button class="w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(61,34,0,0.08)] flex flex-col group">
+<div class="relative h-32">
+<img alt="Dosa" class="w-full h-full object-cover" data-alt="crispy masala dosa roll served on a steel plate with variety of coconut and tomato chutneys, authentic south indian style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD31ZHhUSC5b4X7mpsr5N5vnW3g6CqwEkAHSZ-nRt_k_PHjlmlGEfMmX5DIKK5bQq0gNS84xicC5EDqGjH9DP1ky5-UAflLQMR1J6-yLWEKF3m02iLeu_s5FrY56jWzUUQb-yAljTtFNaf1RjAjMDjNFOMBsJL1WHLcmukVqdueLZPGthjmjTLMLHOEKxIBgHeWfZuteLI2j4mZNpB6dvLQqHybh2vhHVq8wOnxnuvhX0ukn_HrpjDYPySfqtb3G-8pFXwns2TPzupR"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<h3 class="font-title-lg text-[16px] text-on-surface leading-tight mb-1">Paneer Dosa</h3>
+<p class="text-[12px] text-on-surface-variant mb-3 flex-grow">Crispy rice crepe with paneer</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-bold text-primary-container">₹85.00</span>
+<button class="w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 3 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(61,34,0,0.08)] flex flex-col group">
+<div class="relative h-32">
+<img alt="Salad" class="w-full h-full object-cover" data-alt="fresh mediterranean salad bowl with chickpeas, tomatoes, cucumbers, and olive oil dressing, bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkI65f8KHPAOz_ylDLWECl_VWA3pvlCg7yT-tUE4h7WmJjxIonu-AgMMJHvLQ_SfbmVk6ZW1xOIYl1vmsN_DZnxNAdTwSEe6NljAn7j_j7u1i9Nw_hBNcFahGciGQGC00MXB8kWipgz1cqkuDDJF8ziyBjXoyz3_G6x6sq05G2Ip05vqwrrV589UcDdskpYE0XXbCgImk7A__nkW9kjPz2ubchb6mx18P96RvA-pBa63Uf5UJ-FgU5qjb7_Zy4kV7GDBcTCeoSfzgl"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface">4.5</span>
+</div>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<h3 class="font-title-lg text-[16px] text-on-surface leading-tight mb-1">Health Bowl</h3>
+<p class="text-[12px] text-on-surface-variant mb-3 flex-grow">Fresh seasonal greens</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-bold text-primary-container">₹120.00</span>
+<button class="w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 4 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20_rgba(61,34,0,0.08)] flex flex-col group">
+<div class="relative h-32">
+<img alt="Coffee" class="w-full h-full object-cover" data-alt="hot cafe latte with foam heart art on a dark table, soft cafe ambiance lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPM6WYLLSDyrRmr44YgOBDOZ5XjpyF6m1Bwd_RnOIxIINWFtELikPBEla44dYgQFuOROqWy8voJiKkm7WMm3-9T0oEpuqlJXLIHCzi7BW8N5BkLzRyOsNKvGoLW6afgljvUoXSYtA5dxUk6r1P_Twq3xrMCJLl68qbyBGBWNwYt3kh8MGdA4KwxToBmaG2OJWJfjmfJGFYWf41bYW3iVL7fc3Y8rfiYSIt7-b8wbzvDkQrN_4cMv9QoDQFF45BCqF2LJe4KPArS2iU"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-[12px] font-bold text-on-surface">4.7</span>
+</div>
+</div>
+<div class="p-3 flex flex-col flex-grow">
+<h3 class="font-title-lg text-[16px] text-on-surface leading-tight mb-1">Filter Coffee</h3>
+<p class="text-[12px] text-on-surface-variant mb-3 flex-grow">Freshly brewed South Indian</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-bold text-primary-container">₹35.00</span>
+<button class="w-8 h-8 bg-primary-container text-white rounded-full flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Cart Indicator -->
+<div class="fixed bottom-24 left-4 right-4 z-40">
+<button class="w-full bg-red-700 text-white rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+<span class="absolute -top-1 -right-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</div>
+<div class="text-left">
+<p class="text-[14px] font-bold">2 Items in Cart</p>
+<p class="text-[11px] opacity-80">Bharath University Canteen</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-sm">₹110.00</span>
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-white/95 dark:bg-zinc-950/95 backdrop-blur-lg border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] fixed bottom-0 w-full flex justify-around items-center h-20 pb-safe px-2 z-50 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-red-700 dark:text-red-500 bg-red-50 dark:bg-red-950/30 rounded-xl px-4 py-1 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

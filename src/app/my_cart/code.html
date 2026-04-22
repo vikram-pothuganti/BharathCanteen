@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cart &amp; Checkout - Bharath Canteen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff8f4",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-fixed": "#ffddaf",
+                        "surface-bright": "#fff8f4",
+                        "primary": "#8a000a",
+                        "on-surface": "#2b1700",
+                        "outline-variant": "#e4beb9",
+                        "on-tertiary-fixed": "#281800",
+                        "tertiary-container": "#7a5200",
+                        "surface-dim": "#ffd2a4",
+                        "on-primary-container": "#ffc2bb",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#ffc873",
+                        "inverse-surface": "#472a05",
+                        "primary-container": "#b31217",
+                        "on-primary-fixed": "#410002",
+                        "surface-variant": "#ffddbb",
+                        "on-secondary-container": "#794f13",
+                        "inverse-primary": "#ffb4ab",
+                        "on-surface-variant": "#5b403d",
+                        "surface-container-highest": "#ffddbb",
+                        "tertiary-fixed-dim": "#f7bc5f",
+                        "secondary-fixed-dim": "#f5bc77",
+                        "on-error-container": "#93000a",
+                        "outline": "#906f6c",
+                        "on-secondary-fixed": "#2a1700",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-tint": "#ba191b",
+                        "secondary-fixed": "#ffddb8",
+                        "background": "#fff8f4",
+                        "secondary-container": "#fec47e",
+                        "on-error": "#ffffff",
+                        "secondary": "#80551a",
+                        "surface-container-low": "#fff1e6",
+                        "on-primary-fixed-variant": "#93000b",
+                        "on-secondary-fixed-variant": "#653e02",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ffeedf",
+                        "error-container": "#ffdad6",
+                        "on-background": "#2b1700",
+                        "surface-container": "#ffead8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#5b3c00",
+                        "surface-container-high": "#ffe3ca"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin": "20px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xl": "64px",
+                        "md": "24px",
+                        "lg": "40px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- Top AppBar (Mobile Focused) -->
+<header class="bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 shadow-sm docked full-width top-0 sticky z-50 flex justify-between items-center px-4 h-16 w-full">
+<div class="flex items-center gap-3">
+<button class="active:scale-95 duration-200 p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined text-zinc-600">arrow_back</span>
+</button>
+<h1 class="text-xl font-extrabold text-red-700 dark:text-red-500 tracking-tight">Your Cart</h1>
+</div>
+<div class="h-8 w-8 rounded-full bg-surface-variant flex items-center justify-center border border-outline-variant overflow-hidden">
+<img alt="User Profile" class="h-full w-full object-cover" data-alt="Professional headshot of a university student with a friendly expression and neutral office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJIUiVmeF9om_nJ60D6pwIib6Q3FAmkexmUpGvs8lWPm4IghB-c9JkFFP-FrGqd2YmF17RjRz6JpdxKxYJvUyQkExilHHzXac610QgjtUwOHWpwDF9CE5cC5lDIijRjKZEK3cWkuQnDnvVyINwonS6l-Yw8y4UdrFPowqCffH-1OxGWWP_T_k6qt6u6RwAk7hsu3Wn0I3eDBRNfsifuM4IHYKHcyXlvIfbHuk7u_4dD15rADCyV4Ox5m0X-bqtmU23JuJNeNIHaQjT"/>
+</div>
+</header>
+<main class="max-w-md mx-auto px-margin pt-6 pb-40">
+<!-- Preparation Time Banner -->
+<div class="bg-tertiary-fixed text-on-tertiary-fixed rounded-xl p-4 mb-6 flex items-center gap-4 shadow-sm border border-tertiary-fixed-dim">
+<div class="bg-tertiary-container/20 p-2 rounded-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<div>
+<p class="font-label-lg text-on-tertiary-fixed">Estimated Preparation Time</p>
+<p class="font-title-lg text-primary">15 - 20 Mins</p>
+</div>
+</div>
+<!-- Cart Items Section -->
+<section class="space-y-4 mb-8">
+<h2 class="font-headline-md text-on-surface mb-4">Review Order</h2>
+<!-- Food Card: Item 1 -->
+<div class="bg-white rounded-2xl p-4 shadow-[0_4px_20px_rgba(61,34,0,0.08)] flex gap-4 relative overflow-hidden">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of crispy golden-brown masala dosa served on a traditional steel plate with chutneys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfkB8v0XfHgDdbm3LM-RcrIVE-2yIcFii-il4CFcmNcLBG1p0UUoVQZXvu2-KMIRNPSHYBZUTUr5VeAtC9XAnLnQ81Cmp7r46wpA9io2OP0-mIno-SwossHSyRrthNtiH2OVGx8jFN6CyyJZW8HD_ui2WaEIt7zdSktbMaSbr2eilO3kyEgOCI9hWCzd8NYV6MhbOoBnM8QWNL3KOd2KQ7z-UcWHBF2JC_w7UzEsIo9AzZ-sqD53A5JPhRrFY_nMmi_MS_6Nb7VfwD"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-on-surface leading-tight">Masala Dosa</h3>
+<p class="font-label-sm text-on-surface-variant">Classic South Indian</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-title-lg text-primary">₹65</span>
+<div class="flex items-center gap-3 bg-surface-container rounded-full px-2 py-1">
+<button class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-label-lg w-4 text-center">1</span>
+<button class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card: Item 2 -->
+<div class="bg-white rounded-2xl p-4 shadow-[0_4px_20px_rgba(61,34,0,0.08)] flex gap-4 relative overflow-hidden">
+<div class="w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Gourmet double-stacked cheeseburger with fresh lettuce and tomato on a toasted brioche bun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPJfqW-3CdiR3qy4pbHDyn99z1R4827FkSpQEVWGKhpwL4GYvXPoJfpQ7pbjNSKDZg_g0sKKl0Tj1gumFqqgyRmdVoYrLnGqVG8kCVwcOyCQOzWrM2mmbW5yNQJms7WZ3MDfpwH7hlnoJwaTpLBVuWtUdj_rBgtaVknmLzI_VEvsN_ZVqrpsK7TmEhNplNW5s5Q0teemDp3WwD-laAZyHBGbeittBDt-Z7EEQUUZYVrWBEcLEgSo1IsnqGgf45qj3clnvFaQqQrwdQ"/>
+</div>
+<div class="flex-grow flex-col flex justify-between">
+<div>
+<h3 class="font-title-lg text-on-surface leading-tight">University Burger</h3>
+<p class="font-label-sm text-on-surface-variant">Chef's Special</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-title-lg text-primary">₹120</span>
+<div class="flex items-center gap-3 bg-surface-container rounded-full px-2 py-1">
+<button class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-label-lg w-4 text-center">2</span>
+<button class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bill Details -->
+<section class="bg-white rounded-2xl p-gutter border border-zinc-100 mb-8">
+<h3 class="font-label-lg text-on-surface-variant mb-4 uppercase tracking-wider">Bill Summary</h3>
+<div class="space-y-3">
+<div class="flex justify-between font-body-md">
+<span class="text-on-surface-variant">Item Total</span>
+<span>₹305.00</span>
+</div>
+<div class="flex justify-between font-body-md">
+<span class="text-on-surface-variant">Taxes &amp; Charges</span>
+<span>₹18.50</span>
+</div>
+<div class="flex justify-between font-body-md text-secondary">
+<span class="flex items-center gap-1">University Discount <span class="material-symbols-outlined text-sm">info</span></span>
+<span>- ₹15.00</span>
+</div>
+<hr class="border-zinc-100 my-2"/>
+<div class="flex justify-between items-center pt-1">
+<span class="font-headline-md text-on-surface">Total Pay</span>
+<span class="font-headline-md text-primary">₹308.50</span>
+</div>
+</div>
+</section>
+<!-- Delivery Instruction / Notes -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-on-surface-variant">notes</span>
+<h3 class="font-label-lg text-on-surface">Cooking Instructions?</h3>
+</div>
+<textarea class="w-full bg-white border border-outline/20 rounded-xl p-4 font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-zinc-400" placeholder="e.g. Please make it extra spicy, less oil..."></textarea>
+</div>
+</main>
+<!-- Bottom Checkout Bar (Fixed) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-zinc-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 pb-safe">
+<div class="max-w-md mx-auto p-4 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Paying via University Wallet</span>
+<span class="font-label-lg text-on-surface flex items-center gap-1">Bal: ₹1,240 <span class="material-symbols-outlined text-sm text-secondary">chevron_right</span></span>
+</div>
+<button class="bg-primary-container text-white px-8 py-4 rounded-full font-label-lg flex items-center gap-3 active:scale-95 transition-all shadow-lg shadow-red-700/20">
+                Place Order
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Persistent Bottom Nav (Shared Component Logic - Suppressed because transactional, but following the shell mandate for Top level pages normally. In this focused task, we prioritize the checkout button above, but since this is a "Cart" screen which is a top-level destination in the JSON, we include the Nav Bar but with Checkout prioritized). -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center h-20 pb-safe px-2 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-lg border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-40 md:hidden pointer-events-none opacity-0">
+<!-- Hidden for focused checkout experience as per "Shell Visibility" rule for transactional sub-pages, but normally defined as: -->
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-red-600 font-plus-jakarta text-[10px] font-medium">
+<span class="material-symbols-outlined">restaurant</span>
+<span>Menu</span>
+</div>
+<div class="flex flex-col items-center justify-center text-red-700 dark:text-red-500 bg-red-50 dark:bg-red-950/30 rounded-xl px-4 py-1 font-plus-jakarta text-[10px] font-medium">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 font-plus-jakarta text-[10px] font-medium">
+<span class="material-symbols-outlined">history</span>
+<span>Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 font-plus-jakarta text-[10px] font-medium">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</div>
+</nav>
+</body></html>

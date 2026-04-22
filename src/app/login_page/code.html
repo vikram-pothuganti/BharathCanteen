@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff8f4",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-fixed": "#ffddaf",
+                        "surface-bright": "#fff8f4",
+                        "primary": "#8a000a",
+                        "on-surface": "#2b1700",
+                        "outline-variant": "#e4beb9",
+                        "on-tertiary-fixed": "#281800",
+                        "tertiary-container": "#7a5200",
+                        "surface-dim": "#ffd2a4",
+                        "on-primary-container": "#ffc2bb",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#ffc873",
+                        "inverse-surface": "#472a05",
+                        "primary-container": "#b31217",
+                        "on-primary-fixed": "#410002",
+                        "surface-variant": "#ffddbb",
+                        "on-secondary-container": "#794f13",
+                        "inverse-primary": "#ffb4ab",
+                        "on-surface-variant": "#5b403d",
+                        "surface-container-highest": "#ffddbb",
+                        "tertiary-fixed-dim": "#f7bc5f",
+                        "secondary-fixed-dim": "#f5bc77",
+                        "on-error-container": "#93000a",
+                        "outline": "#906f6c",
+                        "on-secondary-fixed": "#2a1700",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-tint": "#ba191b",
+                        "secondary-fixed": "#ffddb8",
+                        "background": "#fff8f4",
+                        "secondary-container": "#fec47e",
+                        "on-error": "#ffffff",
+                        "secondary": "#80551a",
+                        "surface-container-low": "#fff1e6",
+                        "on-primary-fixed-variant": "#93000b",
+                        "on-secondary-fixed-variant": "#653e02",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ffeedf",
+                        "error-container": "#ffdad6",
+                        "on-background": "#2b1700",
+                        "surface-container": "#ffead8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#5b3c00",
+                        "surface-container-high": "#ffe3ca"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin": "20px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xl": "64px",
+                        "md": "24px",
+                        "lg": "40px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            background-color: #b31217;
+            color: white;
+            box-shadow: 0 4px 12px rgba(179, 18, 23, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen flex flex-col font-body-md text-on-surface">
+<header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-zinc-200 flex justify-between items-center px-4 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-700">restaurant_menu</span>
+<h1 class="text-xl font-extrabold text-red-700 tracking-tight font-display-lg">Bharath Canteen</h1>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-margin py-lg">
+<div class="w-full max-w-md">
+<div class="mb-lg text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Welcome Back</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Access your campus dining portal</p>
+</div>
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(61,34,0,0.08)] overflow-hidden border border-zinc-100">
+<div class="flex p-2 bg-surface-container-low m-4 rounded-lg gap-1">
+<button class="flex-1 py-3 px-4 rounded-md font-label-lg text-label-lg active-tab transition-all duration-200">
+                        Student Login
+                    </button>
+<button class="flex-1 py-3 px-4 rounded-md font-label-lg text-label-lg text-on-surface-variant hover:bg-white/50 transition-all duration-200">
+                        Management
+                    </button>
+</div>
+<form class="p-6 space-y-md">
+<div class="space-y-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="email">University Email</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border border-zinc-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md" id="email" placeholder="name@bharathuniv.ac.in" required="" type="email"/>
+</div>
+<p class="text-xs text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                            Must end with @bharathuniv.ac.in
+                        </p>
+</div>
+<div class="space-y-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="password">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">lock</span>
+<input class="w-full pl-12 pr-12 py-4 bg-surface-container-lowest border border-zinc-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md" id="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-5 h-5 rounded border-zinc-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Remember me</span>
+</label>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" href="#">Forgot Password?</a>
+</div>
+<button class="w-full py-4 bg-primary-container text-white font-headline-md text-headline-md rounded-full shadow-lg hover:brightness-110 active:scale-95 transition-all duration-200" type="submit">
+                        Sign In
+                    </button>
+</form>
+<div class="px-6 pb-6 pt-2">
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-zinc-100"></div>
+<span class="flex-shrink mx-4 text-zinc-400 text-xs font-label-sm">SECURE SSO LOGIN</span>
+<div class="flex-grow border-t border-zinc-100"></div>
+</div>
+<button class="w-full py-3 px-4 border border-zinc-200 rounded-xl flex items-center justify-center gap-3 font-label-lg text-label-lg text-on-surface hover:bg-zinc-50 transition-colors">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Official Google G logo in multicolored brand colors on transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA40DPBWu5bp1y7r5BMe773gGuYwjry8WhQ28woMpR8nldT3-XFEHEc87pKwz5WgviA4XrFsRsLa47u2nmDoF54KrAJ_WHARvacvzZOmP5n8aDvw0UeS6Eo4jIXyasu4r-Dajq5-M8CG9sHHsugs4BVPpXHV8m1bU1lj8E2_scOXqK7bMsIkO6rgfz03ssBsu4vdXU-ANf2UV9Y68bzwbLp9-z90VBY8AJp5XjZNzayCPnWG2IByuvqxhukzgBFsYiM6noqxUvbOMtK"/>
+                        Sign in with University Google Account
+                    </button>
+</div>
+</div>
+<div class="mt-lg text-center space-y-md">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Don't have an account? <a class="text-primary font-bold hover:underline" href="#">Contact Registrar</a>
+</p>
+<div class="flex justify-center gap-sm">
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span class="text-zinc-300">•</span>
+<a class="text-xs text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</main>
+<div class="p-margin">
+<div class="relative rounded-2xl overflow-hidden h-48 w-full group shadow-lg">
+<img alt="Delicious Canteen Meal" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of vibrant Mediterranean food bowl with fresh vegetables, hummus, and pita bread under warm restaurant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQRbECVI5tkjRDFORTwCbnGnz2ruzKvHWdJ9KLl8HLBrWWOOLNkrD2qBZql6jJo1waTPicmtRZqRo1Exm_10b_3B2gcYrSuLksQDmFqg_LdLeegQNvR0WjPSx9JD9dMoxxiwp8EKrz0VjlCLVY1B8f2MA95G1NPoay5HFfTpkRzfyBzAeG0jeGlnMfHpw3f1RwcwEP7CMtmAVaOyiTosFwgem01Ohcy6rcLaGMeH9DZ4OzIY4y2oqdk4_4yVD8pI6_Gsm0BSopBHZ6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+<div class="text-white">
+<p class="font-title-lg text-title-lg">Fresh Meals Daily</p>
+<p class="font-body-md text-body-md opacity-90">Pre-order now to skip the campus lunch rush.</p>
+</div>
+</div>
+</div>
+</div>
+<footer class="mt-auto py-base text-center border-t border-zinc-100">
+<p class="font-label-sm text-label-sm text-zinc-400">© 2024 Bharath University Food Services</p>
+</footer>
+</body></html>

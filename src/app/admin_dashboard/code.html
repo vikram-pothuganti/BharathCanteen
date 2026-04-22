@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Portal - Bharath Canteen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fff8f4;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff8f4",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-fixed": "#ffddaf",
+                        "surface-bright": "#fff8f4",
+                        "primary": "#8a000a",
+                        "on-surface": "#2b1700",
+                        "outline-variant": "#e4beb9",
+                        "on-tertiary-fixed": "#281800",
+                        "tertiary-container": "#7a5200",
+                        "surface-dim": "#ffd2a4",
+                        "on-primary-container": "#ffc2bb",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#ffc873",
+                        "inverse-surface": "#472a05",
+                        "primary-container": "#b31217",
+                        "on-primary-fixed": "#410002",
+                        "surface-variant": "#ffddbb",
+                        "on-secondary-container": "#794f13",
+                        "inverse-primary": "#ffb4ab",
+                        "on-surface-variant": "#5b403d",
+                        "surface-container-highest": "#ffddbb",
+                        "tertiary-fixed-dim": "#f7bc5f",
+                        "secondary-fixed-dim": "#f5bc77",
+                        "on-error-container": "#93000a",
+                        "outline": "#906f6c",
+                        "on-secondary-fixed": "#2a1700",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-tint": "#ba191b",
+                        "secondary-fixed": "#ffddb8",
+                        "background": "#fff8f4",
+                        "secondary-container": "#fec47e",
+                        "on-error": "#ffffff",
+                        "secondary": "#80551a",
+                        "surface-container-low": "#fff1e6",
+                        "on-primary-fixed-variant": "#93000b",
+                        "on-secondary-fixed-variant": "#653e02",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ffeedf",
+                        "error-container": "#ffdad6",
+                        "on-background": "#2b1700",
+                        "surface-container": "#ffead8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#5b3c00",
+                        "surface-container-high": "#ffe3ca"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md text-red-700 dark:text-red-500 font-plus-jakarta text-sm font-semibold docked full-width top-0 sticky z-50 border-b border-zinc-200 dark:border-zinc-800 shadow-sm flex justify-between items-center px-4 h-16 w-full">
+<div class="flex items-center gap-3">
+<button class="hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-xl font-extrabold text-red-700 dark:text-red-500 tracking-tight">Bharath Canteen</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white text-[10px]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+</div>
+</header>
+<main class="pb-24 pt-4 px-margin max-w-md mx-auto">
+<!-- Dashboard Summary Stats (Asymmetric Layout) -->
+<section class="mb-lg">
+<h2 class="font-headline-md text-headline-md mb-md text-on-surface">Dashboard</h2>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="col-span-2 bg-primary-container text-on-primary rounded-xl p-md shadow-[0_4px_20px_rgba(179,18,23,0.15)] flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="z-10">
+<p class="font-label-lg text-label-lg opacity-80">Live Orders</p>
+<h3 class="font-display-lg text-[40px] leading-none font-bold">24</h3>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-white/10 text-[120px]" data-icon="restaurant">restaurant</span>
+<div class="z-10 flex items-center gap-2 font-label-sm text-label-sm">
+<span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        Processing Now
+                    </div>
+</div>
+<div class="bg-white rounded-xl p-md shadow-[0_4px_20px_rgba(61,34,0,0.06)] border border-outline-variant/30">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Revenue</p>
+<p class="font-headline-md text-headline-md text-primary mt-1">₹4.2k</p>
+</div>
+<div class="bg-white rounded-xl p-md shadow-[0_4px_20px_rgba(61,34,0,0.06)] border border-outline-variant/30">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Top Item</p>
+<p class="font-headline-md text-headline-md text-primary mt-1">Dosa</p>
+</div>
+</div>
+</section>
+<!-- Current Active Orders - Glassmorphism Style -->
+<section class="mb-lg">
+<div class="flex justify-between items-end mb-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Active Orders</h2>
+<button class="text-primary font-label-lg text-label-lg">View All</button>
+</div>
+<div class="space-y-sm">
+<!-- Order Card 1 -->
+<div class="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl p-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="close-up of a golden crispy masala dosa served with fresh coconut chutney and spicy sambar in steel bowls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoAB1X_iMWsHwx4kYzNB_jAZ380Ao3vy_Ahs8xxo5utrd_hVe8QNcrk8NAAGfl04reqTtGDRlgNQoS8pKL2lwsfu4WFicEL2hfKlPveBo_BK2h9bWFzD8BqbXPUKKfjSJVIFy-33sZN6OHhoRw-TKtJd0rmBcfItG4Y8MFN64MWpFafEwQv1av5feekZEkNOdh33OUiMW73ET7F96HTgMijHX-071Zs6KxNWHcSdlQMQxemzEX0RY6_z-yD0o4o_2CwwlzQv-xzQyQ"/>
+</div>
+<div>
+<p class="font-title-lg text-sm text-on-surface">#2041 • Arjun R.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">2x Masala Dosa</p>
+</div>
+</div>
+<span class="bg-tertiary-container/10 text-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Preparing</span>
+</div>
+<!-- Order Card 2 -->
+<div class="bg-white/60 backdrop-blur-sm border border-white/40 rounded-xl p-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="vibrant street food style chicken biryani with aromatic basmati rice and fresh cilantro garnish on a ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-vMi0ioH_Lz5uoyEPuecusQk7p3exPbAMMan4uiN0ganUXJkWQOZucLeIs4PkubQe0xIAABq_mK_v-gv8-7DWoFKLHuyvSUtlFOkhOIvEDyiZI381S4xtSEj1B-KmoSL4uiMM8VirkklHn7u3dnRNf88cvjE6E2gB2BJIEXPA2FvqY9Eea6GsflqbiEoTKsdUCxPvOfKW4dHH7P49nmHJ0vwf5W5vLgyWo_2nB5a48xCH9eMq_6r3lIhU6qFjrGTD-c08M1lV3QWS"/>
+</div>
+<div>
+<p class="font-title-lg text-sm text-on-surface">#2042 • Priya K.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">1x Paneer Biryani</p>
+</div>
+</div>
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Ready</span>
+</div>
+</div>
+</section>
+<!-- Menu Management Section -->
+<section class="mb-lg">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Menu Manager</h2>
+<button class="bg-primary-container text-white px-4 py-2 rounded-full font-label-lg text-label-lg flex items-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                    Add Item
+                </button>
+</div>
+<div class="flex gap-xs overflow-x-auto pb-4 -mx-margin px-margin no-scrollbar">
+<span class="bg-primary-container text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">All Items</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">South Indian</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Beverages</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Snacks</span>
+</div>
+<div class="space-y-base mt-2">
+<!-- Menu Item 1 -->
+<div class="bg-white rounded-2xl p-sm shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20">
+<div class="flex gap-sm">
+<div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="traditional idli plate with fluffy white rice cakes and various colorful chutneys on a banana leaf background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4qiif_Z06yTGhoOv306JEAkMWsPDDYCFkv0AxmtEQ1p05CDdtzgpEC8sjD2Ma8reR4i8CkoeBU0nOgF_4VWoIF7PAVot5b9kEsX1A6xJkryDOHjv7lSz2SoGyn5BR6ezIA1_mo4Bbwv4E60oRekZyEQhe-u9sCX8ulFupYF_MeMTYyNwnYGyy0GmJP0nXTJd-wof99tA3pzBd9Sdpa-FVenHzgSyzc6TyvZkWnMMKa51iWg0m2FCONq1jJggC5CAzT-Sw5Ff6Bjk_"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-title-lg text-base text-on-surface">Steamed Idli (2pcs)</h4>
+<span class="text-primary font-bold">₹40</span>
+</div>
+<p class="font-label-sm text-on-surface-variant text-[11px] line-clamp-1">Soft fermented rice cakes served with sambar.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex gap-3">
+<button class="text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+<button class="text-zinc-400 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-zinc-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+<span class="ms-2 text-[10px] font-bold text-on-surface-variant uppercase">Stock</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Menu Item 2 -->
+<div class="bg-white rounded-2xl p-sm shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20">
+<div class="flex gap-sm">
+<div class="w-20 h-20 rounded-xl overflow-hidden shrink-0 filter grayscale opacity-60">
+<img class="w-full h-full object-cover" data-alt="freshly squeezed orange juice in a glass with condensation on the outside and fruit slices nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb2OKAyZFDzrLnIZ90ZHYEkLfEBiP_9n04cDrEpcHBbIGkqVOUiAR5zDjIllLZiQwhri7rtu-5BwselStzAXx4lHVkMu-xvFmFctGmU6cXo2rJbZ8N5eSptX7dvFakzll3VgTv4hIw2Eyc4g1g4pd9TVWt9wTSMXoOzEAUwBgNeMcpZuhV4aHML7SAjDecoACF-2nPfeWRN1rEuVpwjvT7-G0RiiKDOOr0MfRLr8kiiRwH1U7S04I9jZZIV1P2MifWk7t9ESeuuyD7"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-title-lg text-base text-on-surface">Fresh Lime Soda</h4>
+<span class="text-zinc-400 font-bold">₹35</span>
+</div>
+<p class="font-label-sm text-on-surface-variant text-[11px] line-clamp-1">Refreshing sweet and salty lime drink.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex gap-3">
+<button class="text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+<button class="text-zinc-400 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-zinc-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+<span class="ms-2 text-[10px] font-bold text-on-surface-variant uppercase">Stock</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Menu Item 3 -->
+<div class="bg-white rounded-2xl p-sm shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-outline-variant/20">
+<div class="flex gap-sm">
+<div class="w-20 h-20 rounded-xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="crispy golden samosas served on a platter with green mint chutney and sweet tamarind sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFgMjLy2x0Mviximbq3aKYGz-VZDVVK6vF_HRRt_CCeYrpc4ZuvpBMdUI2NIr1N92gHnzPJ86XoE2ntRli0dDy2SkNk1EVXZ9mfJZ9-RjEWMYRckQmbLv0-ssGNbRMD46cX1E9VEOhHgij47GJTT96vsNrTJyjRfQijMMGXsVFedaJq67S4bsVJwDa1tx5OFOKjbJnYrLR4dTB-gzH6Lj89hkbktSghgLlpbhMhBjpHRA7nAPiHNpq8_8DxrredGN2GxBV29-KKiTa"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-title-lg text-base text-on-surface">Veg Samosa (2pcs)</h4>
+<span class="text-primary font-bold">₹25</span>
+</div>
+<p class="font-label-sm text-on-surface-variant text-[11px] line-clamp-1">Crispy pastry filled with spiced potatoes.</p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex gap-3">
+<button class="text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+<button class="text-zinc-400 hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-zinc-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+<span class="ms-2 text-[10px] font-bold text-on-surface-variant uppercase">Stock</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white/95 dark:bg-zinc-950/95 backdrop-blur-lg border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] fixed bottom-0 w-full flex justify-around items-center h-20 pb-safe px-2 z-50 rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 font-plus-jakarta text-[10px] font-medium hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+            Menu
+        </div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 font-plus-jakarta text-[10px] font-medium hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+            Cart
+        </div>
+<div class="flex flex-col items-center justify-center text-red-700 dark:text-red-500 bg-red-50 dark:bg-red-950/30 rounded-xl px-4 py-1 font-plus-jakarta text-[10px] font-medium active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+            Orders
+        </div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 font-plus-jakarta text-[10px] font-medium hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+            Profile
+        </div>
+</nav>
+</body></html>

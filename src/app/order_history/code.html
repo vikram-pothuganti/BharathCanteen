@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff8f4",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-fixed": "#ffddaf",
+                        "surface-bright": "#fff8f4",
+                        "primary": "#8a000a",
+                        "on-surface": "#2b1700",
+                        "outline-variant": "#e4beb9",
+                        "on-tertiary-fixed": "#281800",
+                        "tertiary-container": "#7a5200",
+                        "surface-dim": "#ffd2a4",
+                        "on-primary-container": "#ffc2bb",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#ffc873",
+                        "inverse-surface": "#472a05",
+                        "primary-container": "#b31217",
+                        "on-primary-fixed": "#410002",
+                        "surface-variant": "#ffddbb",
+                        "on-secondary-container": "#794f13",
+                        "inverse-primary": "#ffb4ab",
+                        "on-surface-variant": "#5b403d",
+                        "surface-container-highest": "#ffddbb",
+                        "tertiary-fixed-dim": "#f7bc5f",
+                        "secondary-fixed-dim": "#f5bc77",
+                        "on-error-container": "#93000a",
+                        "outline": "#906f6c",
+                        "on-secondary-fixed": "#2a1700",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-tint": "#ba191b",
+                        "secondary-fixed": "#ffddb8",
+                        "background": "#fff8f4",
+                        "secondary-container": "#fec47e",
+                        "on-error": "#ffffff",
+                        "secondary": "#80551a",
+                        "surface-container-low": "#fff1e6",
+                        "on-primary-fixed-variant": "#93000b",
+                        "on-secondary-fixed-variant": "#653e02",
+                        "on-tertiary-fixed-variant": "#614000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ffeedf",
+                        "error-container": "#ffdad6",
+                        "on-background": "#2b1700",
+                        "surface-container": "#ffead8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#5b3c00",
+                        "surface-container-high": "#ffe3ca"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin": "20px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xl": "64px",
+                        "md": "24px",
+                        "lg": "40px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .order-card-shadow {
+            box-shadow: 0px 4px 20px rgba(61, 34, 0, 0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background selection:bg-primary-fixed">
+<!-- Top App Bar -->
+<header class="bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm border-b border-zinc-200 dark:border-zinc-800 docked full-width top-0 sticky z-50 flex justify-between items-center px-4 h-16 w-full">
+<div class="flex items-center gap-3">
+<button class="text-zinc-500 dark:text-zinc-400 p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-plus-jakarta text-xl font-extrabold text-red-700 dark:text-red-500 tracking-tight">Bharath Canteen</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden ring-2 ring-white shadow-sm">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a young male student smiling, university campus background in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrMb-XQf--bbKwctzxANQ0TPyskzmfQTcVX6plaC6_GA3hGj4K_8xrXPgvsVVX-GpI1bghJPQWYJZCfyNNEfugVQ2W7OezGDyi1tl9uNjSoLJ1ZaacRQBq0u_gVrHJ3JBGEulecNwSlDOZzvT8bLyh324ccIAL4uy5xET5mEaBd28YRPlH-MAFg-rPWwU0lZQL0bnygU4ZGEtv0uf7ajeY5xZVpsL3Ko5n9ijUe-Ct2qV7x5uTBno8gnEjyd9auOHSAG3EcICEo20y"/>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto px-margin pt-base pb-32">
+<!-- Section Header -->
+<div class="flex justify-between items-end mb-6 pt-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Order History</h2>
+<p class="font-body-md text-label-sm text-on-surface-variant">Track your recent university meals</p>
+</div>
+<div class="bg-surface-container p-2 rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto pb-4 -mx-margin px-margin no-scrollbar">
+<button class="bg-primary-container text-white px-4 py-2 rounded-full font-label-lg whitespace-nowrap order-card-shadow">All Orders</button>
+<button class="bg-white text-on-surface-variant px-4 py-2 rounded-full font-label-lg whitespace-nowrap border border-outline-variant/30">Active</button>
+<button class="bg-white text-on-surface-variant px-4 py-2 rounded-full font-label-lg whitespace-nowrap border border-outline-variant/30">Completed</button>
+<button class="bg-white text-on-surface-variant px-4 py-2 rounded-full font-label-lg whitespace-nowrap border border-outline-variant/30">Cancelled</button>
+</div>
+<!-- Orders List -->
+<div class="space-y-4">
+<!-- Order Card 1: Preparing -->
+<div class="bg-white rounded-2xl order-card-shadow overflow-hidden border border-zinc-50">
+<div class="p-4 border-b border-zinc-100 flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-title-lg text-title-lg">Order #8842</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full text-[10px] font-bold">NEW</span>
+</div>
+<p class="font-body-md text-label-sm text-on-surface-variant italic">Today, 12:30 PM</p>
+</div>
+<span class="bg-tertiary-container/10 text-tertiary-container px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="restaurant">restaurant</span>
+                        Preparing
+                    </span>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Paneer Butter Masala" class="w-full h-full object-cover" data-alt="Creamy orange paneer butter masala in a traditional copper bowl with cilantro garnish, warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFWIhCYJN-Iipr9aAMNKo_nBk4Je9COL7MoayfkacLa-vJxyOOeYsi3BB8toU9cs0P8WhNA1ODYDg4Va_ymGbCZyc63aEDPrD0sL9PEDEG_zefLUGffEtyT0FbztIcY1DJoJL7puqtFN9X5JWN4FgX3mHzoCtnnzEoY0FOJ4J0YhDjldr9nR5jFdXDVSDJGdMxXASAC4vPub_xGRbpLhpfZdvkg8r93psXRIAzbpdbesZ7ckcRCtw-BDyn-883v-hDKGIVKVj2GNdH"/>
+</div>
+<div class="flex-grow">
+<h4 class="font-title-lg text-body-md font-bold">Paneer Butter Masala + 2 Naan</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant">North Indian Special</p>
+<p class="text-primary font-bold mt-1">₹240.00</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-grow bg-primary text-white py-2.5 rounded-xl font-label-lg active:scale-95 transition-all">Track Order</button>
+</div>
+</div>
+</div>
+<!-- Order Card 2: Ready -->
+<div class="bg-white rounded-2xl order-card-shadow overflow-hidden border border-zinc-50">
+<div class="p-4 border-b border-zinc-100 flex justify-between items-start">
+<div>
+<h3 class="font-title-lg text-title-lg mb-1">Order #8839</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant italic">Today, 11:15 AM</p>
+</div>
+<span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                        Ready for Pickup
+                    </span>
+</div>
+<div class="p-4">
+<div class="space-y-3 mb-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs font-bold">1x</span>
+<span class="font-body-md text-body-md">Cold Coffee with Ice Cream</span>
+</div>
+<span class="font-label-lg">₹85.00</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container px-2 py-0.5 rounded text-xs font-bold">2x</span>
+<span class="font-body-md text-body-md">Veg Grilled Sandwich</span>
+</div>
+<span class="font-label-lg">₹120.00</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-dashed border-zinc-200 mb-4">
+<span class="font-label-lg text-on-surface-variant">Total Paid</span>
+<span class="font-headline-md text-primary">₹205.00</span>
+</div>
+<div class="bg-emerald-50 border border-emerald-100 rounded-xl p-3 flex items-start gap-3">
+<span class="material-symbols-outlined text-emerald-600 mt-0.5" data-icon="info">info</span>
+<div>
+<p class="text-xs font-bold text-emerald-800">Ready at Counter 4</p>
+<p class="text-[10px] text-emerald-600">Please show your QR code at the counter.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Card 3: Picked Up -->
+<div class="bg-white rounded-2xl order-card-shadow overflow-hidden border border-zinc-50 opacity-90">
+<div class="p-4 border-b border-zinc-100 flex justify-between items-start">
+<div>
+<h3 class="font-title-lg text-title-lg mb-1">Order #8812</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant italic">Yesterday, 07:45 PM</p>
+</div>
+<span class="bg-zinc-100 text-zinc-500 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="task_alt">task_alt</span>
+                        Picked Up
+                    </span>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-4 mb-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="fastfood">fastfood</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-body-md font-bold">Masala Dosa, Filter Coffee</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant">2 Items • ₹115.00</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 border border-primary text-primary py-2 rounded-xl font-label-lg active:scale-95 transition-all">Reorder</button>
+<button class="flex-1 bg-surface-container-high text-on-surface py-2 rounded-xl font-label-lg active:scale-95 transition-all">Rate Food</button>
+</div>
+</div>
+</div>
+<!-- Order Card 4: Completed -->
+<div class="bg-white rounded-2xl order-card-shadow overflow-hidden border border-zinc-50 opacity-80">
+<div class="p-4 border-b border-zinc-100 flex justify-between items-start">
+<div>
+<h3 class="font-title-lg text-title-lg mb-1">Order #8795</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant italic">Oct 24, 01:20 PM</p>
+</div>
+<span class="bg-zinc-100 text-zinc-500 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="done_all">done_all</span>
+                        Completed
+                    </span>
+</div>
+<div class="p-4">
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Classic Veg Burger Combo</p>
+<div class="flex gap-2">
+<button class="w-full border border-primary text-primary py-2 rounded-xl font-label-lg active:scale-95 transition-all">Reorder</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="bg-white/95 dark:bg-zinc-950/95 backdrop-blur-lg border-t border-zinc-100 dark:border-zinc-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] fixed bottom-0 w-full flex justify-around items-center h-20 pb-safe px-2 z-50 rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-red-700 dark:text-red-500 bg-red-50 dark:bg-red-950/30 rounded-xl px-4 py-1 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="history" data-weight="fill" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-plus-jakarta text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Floating Help Action (Optional contextual) -->
+<button class="fixed bottom-24 right-4 bg-tertiary-container text-white p-4 rounded-full shadow-lg active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</button>
+</body></html>
