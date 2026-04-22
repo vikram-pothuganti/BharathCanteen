@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -14,12 +15,14 @@ const fadeUp = {
 };
 
 const CATEGORIES = [
-  { id: "all",       icon: "restaurant",      label: "All" },
-  { id: "breakfast", icon: "breakfast_dining", label: "Breakfast" },
-  { id: "north",     icon: "lunch_dining",     label: "North Indian" },
-  { id: "juices",    icon: "local_bar",        label: "Juices" },
-  { id: "bakery",    icon: "bakery_dining",    label: "Bakery" },
-  { id: "desserts",  icon: "icecream",         label: "Desserts" },
+  { id: "All",          icon: "restaurant",      label: "All",          count: "350+" },
+  { id: "Breakfast",    icon: "breakfast_dining", label: "Breakfast",    count: "50" },
+  { id: "North Indian", icon: "lunch_dining",     label: "North Indian", count: "50" },
+  { id: "South Indian", icon: "rice_bowl",        label: "South Indian", count: "50" },
+  { id: "Snacks",       icon: "tapas",            label: "Snacks",       count: "50" },
+  { id: "Juices",       icon: "local_bar",        label: "Juices",       count: "50" },
+  { id: "Bakery",       icon: "bakery_dining",    label: "Bakery",       count: "50" },
+  { id: "Desserts",     icon: "icecream",         label: "Desserts",     count: "50" },
 ];
 
 const SPECIALS = [
@@ -59,14 +62,15 @@ const SPECIALS = [
 ];
 
 const SERVICES = [
-  { icon: "electric_bolt", label: "Quick Pickup",  desc: "Ready in 10 min",      href: "/menu",   color: "text-amber-500" },
-  { icon: "event_seat",    label: "Table Booking", desc: "Reserve your spot",    href: "/booking", color: "text-sky-500" },
-  { icon: "history",       label: "Reorder",       desc: "Your last favourites", href: "/orders",  color: "text-green-500" },
-  { icon: "support_agent", label: "Support",        desc: "24/7 help centre",     href: "/support", color: "text-purple-500" },
+  { icon: "electric_bolt", label: "Quick Pickup",  desc: "Order ahead, skip the queue. Ready in 10 min.",     href: "/menu",    color: "text-amber-500",  stat: "~10 min" },
+  { icon: "event_seat",    label: "Table Booking", desc: "Reserve a table in the canteen for group meals.",   href: "/booking", color: "text-sky-500",    stat: "12 tables" },
+  { icon: "history",       label: "Reorder",       desc: "Re-order your favourite meals with one tap.",       href: "/orders",  color: "text-green-500",  stat: "4 past" },
+  { icon: "support_agent", label: "Support",        desc: "Get help with orders, payments, or feedback 24/7.", href: "/support", color: "text-purple-500", stat: "24/7" },
 ];
 
 export default function HomePage() {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const router = useRouter();
+  const [activeCategory, setActiveCategory] = useState("All");
   const [cart, setCart] = useState<Record<number, number>>({});
   const [toast, setToast] = useState<string | null>(null);
 
@@ -218,7 +222,10 @@ export default function HomePage() {
                   animate="show"
                   variants={fadeUp}
                   whileTap={{ scale: 0.92 }}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => {
+                    setActiveCategory(cat.id);
+                    router.push(`/menu?category=${encodeURIComponent(cat.id)}`);
+                  }}
                   className={`flex flex-col items-center gap-1.5 flex-shrink-0 cursor-pointer group`}
                 >
                   <motion.div
@@ -239,9 +246,12 @@ export default function HomePage() {
                       {cat.icon}
                     </span>
                   </motion.div>
-                  <span className={`text-[11px] font-semibold transition-colors ${active ? "text-primary" : "text-zinc-500 group-hover:text-zinc-800"}`}>
-                    {cat.label}
-                  </span>
+                  <div className="text-center">
+                    <span className={`text-[11px] font-semibold transition-colors block ${active ? "text-primary" : "text-zinc-500 group-hover:text-zinc-800"}`}>
+                      {cat.label}
+                    </span>
+                    <span className="text-[9px] text-zinc-400">{cat.count} items</span>
+                  </div>
                 </motion.button>
               );
             })}
