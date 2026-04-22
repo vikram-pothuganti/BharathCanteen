@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F5F5DC;
+  --foreground: #3D2200;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Bharath Canteen Custom Colors from Design System */
+  --color-primary: #B31217;
+  --color-primary-dark: #8a000a;
+  --color-secondary: #F2B974;
+  --color-secondary-dark: #80551a;
+  
+  --color-surface: #fff8f4;
+  --color-surface-dim: #ffd2a4;
+  --color-surface-bright: #fff8f4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff1e6;
+  --color-surface-container: #ffead8;
+  --color-surface-container-high: #ffe3ca;
+  --color-surface-container-highest: #ffddbb;
+  --color-on-surface: #2b1700;
+  
+  --font-sans: "Work Sans", Arial, Helvetica, sans-serif;
+  --font-display: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+
+  /* Custom Elevation & Shadows */
+  --shadow-premium: 0px 4px 20px rgba(61, 34, 0, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #2b1700;
+    --foreground: #F5F5DC;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
 }
